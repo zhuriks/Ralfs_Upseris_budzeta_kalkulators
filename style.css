@@ -1,67 +1,120 @@
+
+
 /* Nodefinē kontenera maksimālo platumu un ar margin: auto nocentre */
 .container {
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Pieškir izkārtojumu ar css grid, priekš desktop*/
+@media only screen and (min-width: 700px) {
+  .grid_layout {
+    display: grid;
+    grid-template-areas: 'top top' 'left right';
+    grid-gap: 10px;
+    padding: 15px;
+    grid-template-rows: 150px;
+    grid-auto-rows: 600px;
   }
-  
-  /* Pieškir izkārtojumu ar css grid, priekš desktop*/
-  @media only screen and (min-width: 700px) {
-    .grid_layout {
-      display: grid;
-      grid-template-areas: 'top top' 'left right';
-      grid-gap: 10px;
-      padding: 15px;
-      grid-template-rows: 150px;
-      grid-auto-rows: 600px;
-    }
-  }
-  
-  .top {
-    grid-area: top;
-    text-align: center;
-  }
-  
-  .left {
-    grid-area: left;
-  }
-  
-  .right {
-    grid-area: right;
-  }
-  
-  .container > div {
-    padding: 30px;
-    border: 1px blueviolet solid;
-  }
-  
-  .container > div h1 {
-    margin-top: 0;
-  }
-  
-  .budget__value {
-    padding-bottom: 30px;
-  }
-  
-  .budget__total {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  
-  /* styling for income and expeses list */
-  .list {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .list_item {
-    display: flex;
-    justify-content: space-between;
-  }
-  .list__inner {
-    flex-grow: 1;
-  }
-  
-  .list__total {
-    align-self: flex-end;
-  }
-  
+}
+<a href="#" class="myButton">nigger</a>
+
+.myButton {
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+	background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+	background-color:#33bdef;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+	background:-moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:-webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:-o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:-ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef',GradientType=0);
+	background-color:#019ad2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.top {
+  grid-area: top;
+  text-align: center;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.container > div {
+  padding: 30px;
+  border: 1px blueviolet solid;
+}
+
+.container > div h1 {
+  margin-top: 0;
+}
+
+.budget__value {
+  padding-bottom: 30px;
+}
+
+.budget__total {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* styling for income and expeses list */
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+}
+.list__inner {
+  flex-grow: 1;
+}
+
+.list__total {
+  align-self: flex-end;
+}
+/* 
+CSS UZDEVUMI
+Nostilot galvenes un saraksta elementus
+-"Pieejamais budžets" tekstam piešķirt stilu, kas labi iederas kopējā dizainā
+-Ievades laukiem piešķirt vizuāli pievilcīgu stilu (font-size, border, padding)
+-Nostilot pogas vizuāli pievilcīgi
+-Izcelt kopējo izdevumu un ienākumu izvadi
+-Ienākumu un izdevumu sarakstam piešķirt stilu, kas labāk nodala saraksta ierakstus vienu no otra
+
+*/
